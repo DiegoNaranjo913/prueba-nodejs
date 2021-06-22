@@ -12,6 +12,6 @@ app.listen(app.get('port'), () => {
     console.log('Bienvenido al puerto', app.get('port'));
 });
 
-app.use('/api/empleados', require('./server/routes/personas'));
+app.use('/api/personas', require('./server/routes/personas'));
 app.use('/api/gifs', require('./server/routes/gifs'));
 app.use('/api', require('./server/routes/token'));

@@ -3,6 +3,6 @@ const router = express.Router();
 const gifs = require('../controllers/gifs');
 const { verificar } = require('../middleware/verificacion');
 
-router.get('/', verificar, gifs.obtenerGifs);
+router.post('/', verificar, gifs.obtenerGifs);
 
 module.exports = router;

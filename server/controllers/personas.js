@@ -1,9 +1,16 @@
 const Personas = require('../models/personas');
 
-const obtenerEmpleados = async (req, res) => {
+const obtenerPersona = async (req, res) => {
     const listadoPersonas = await Personas.find();
     console.log(listadoPersonas);
     res.json(listadoPersonas);
 }
 
-module.exports = { obtenerEmpleados };
+const agregarPersona = async (req, res) => {
+    const nuevo = new Personas(req.body);
+    await nuevo.save();
+
+    res.json("ok");
+}
+
+module.exports = { obtenerPersona, agregarPersona };
