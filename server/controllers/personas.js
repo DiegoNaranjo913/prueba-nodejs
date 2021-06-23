@@ -2,7 +2,6 @@ const Personas = require('../models/personas');
 
 const obtenerPersona = async (req, res) => {
     const listadoPersonas = await Personas.find();
-    console.log(listadoPersonas);
     res.json(listadoPersonas);
 }
 
